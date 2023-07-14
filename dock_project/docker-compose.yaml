@@ -1,0 +1,21 @@
+version: '3'
+services:
+  web1:
+    image: 'minjun5876/mj_apache2'
+    networks:
+      - mynet      
+  web2:
+    image: 'minjun5876/mj_nginx'
+    networks:
+      - mynet
+  lb:
+    image: 'minjun5876/lb'
+    networks:
+      - mynet
+    ports:
+      - 80:80
+    depends_on:
+      - web1
+      - web2        
+networks:
+  mynet:        

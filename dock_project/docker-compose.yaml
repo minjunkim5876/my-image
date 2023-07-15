@@ -20,7 +20,7 @@ services:
     image: 'minjun5876/loadbalancer'
     volumes:
       - type: bind
-        source: ./ubuntu_nginx_loadbalancer/nginx/sites-available
+        source: ./ubuntu_nginx_loadbalancer/sites-available
         target: /etc/nginx/sites-available
     networks:
       - mynet

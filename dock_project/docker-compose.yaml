@@ -1,23 +1,23 @@
 version: '3'
 services:
   web1:
-    image: 'abhyuni/apache2'
+    image: 'minjun5876/apache2'
     networks:
       - mynet
   web2:
-    image: 'abhyuni/nginx'
+    image: 'minjun5876/nginx'
     networks:
       - mynet
   web3:
-    image: 'abhyuni/apache2'
+    image: 'minjun5876/apache2'
     networks:
       - mynet
   web4:
-    image: 'abhyuni/nginx'
+    image: 'minjun5876/nginx'
     networks:
       - mynet
   lb:
-    image: 'abhyuni/loadbalancer'
+    image: 'minjun5876/loadbalancer'
     volumes:
       - type: bind
         source: ./ubuntu_nginx_loadbalancer/nginx/sites-available
